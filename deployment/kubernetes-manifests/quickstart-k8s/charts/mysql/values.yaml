@@ -183,12 +183,12 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, azure-disk on
   ##   Azure, standard on GKE, AWS & OpenStack)
   ##
-  # storageClass: "-"
+  storageClass: "local-path"
   accessModes:
   - ReadWriteOnce
   size: 1Gi
   annotations: {}
-  reclaimPolicy: ""
+  reclaimPolicy: "delete"
 
 ## Set pod priorityClassName
 # priorityClassName: {}
